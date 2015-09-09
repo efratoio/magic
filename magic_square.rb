@@ -42,8 +42,8 @@ def next_step?
 		$y = b
 
 	else
-		a = ($x+1) %$size
-		b = $y 
+		a = ($x)
+		b = ($y+1)% $size 
 		if $arr[b][a] == 0
 			$arr[b][a] = $arr[$y][$x]+1
 			$x = a
@@ -71,9 +71,7 @@ def main
 	pretty_print
 	$x = ($size/2)
 	$arr[$y][$x] = 1
-	puts $arr[$x][$y]
-	puts $x
-	puts $y
+
 
 	fill_square
 	pretty_print
